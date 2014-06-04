@@ -21,6 +21,17 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-social-twitter</artifactId>
         </dependency>
+
+        <!-- Both are needed for jsp support-->
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-jasper</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+        </dependency>
+
     </dependencies>
 
     <!-- Needed for fat jar -->
@@ -39,7 +50,9 @@
         <repository>
             <id>spring-snapshots</id>
             <url>http://repo.spring.io/snapshot</url>
-            <snapshots><enabled>true</enabled></snapshots>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
         </repository>
         <repository>
             <id>spring-milestones</id>
@@ -56,5 +69,5 @@
             <url>http://repo.spring.io/milestone</url>
         </pluginRepository>
     </pluginRepositories>
-	
+
 </project>
